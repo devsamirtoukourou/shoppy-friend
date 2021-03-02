@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/na_rss"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="Shopping List" />
+        <item
+            android:id="@+id/nav_my_favorites"
+            android:icon="@drawable/ic_baseline_favorite_24"
+            android:title="My favourites" />
+        <item
+            android:id="@+id/nav_purchase_history"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="Purchase history" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/ic_baseline_credit_card_24"
+            android:title="Wallet" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_baseline_perm_device_information_24"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_deconnexion"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="Deconnexion" />
+    </group>
+
+</menu>
