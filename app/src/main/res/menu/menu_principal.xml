@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/na_rss"
+            android:id="@+id/nav_rss"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
             android:title="Shopping List" />
         <item
