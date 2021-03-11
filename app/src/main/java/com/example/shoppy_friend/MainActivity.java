@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
-
-
     public void initUI() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -30,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      //  Places.initialize(getApplicationContext(), api);
-        //PlacesClient placesClient = Places.createClient();
 
 
 
@@ -44,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new F00_HomePage()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new F01_Shopping_List_Fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_rss);
         }
 
@@ -77,13 +73,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_about:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new F05_About_Fragment()).commit();
                 break;
-            case R.id.nav_deconnexion:
+            /*case R.id.nav_deconnexion:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new F06_Deconnexion_Fragment()).commit();
+                break;*/
+            case R.id.nav_deconnexion:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new F07_New_Account_Fragment()).commit();
                 break;
-
-           //case R.id.nav_accueil:
-             //  getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapsFragment()).commit();
-               // break;
+            /*case R.id.nav_deconnexion:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new F08_Recover_Password_Fragment()).commit();
+                break;*/
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
