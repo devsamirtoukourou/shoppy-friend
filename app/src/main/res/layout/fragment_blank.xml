@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:apiKey="@string/api_map_key"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <MotionLayout
+        android:windowSoftInputMode="adjustResize|stateVisible"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="157dp"
+        android:background="#BC2727"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <EditText
+            android:id="@+id/editText_Where_Is_Delivery_Point"
+            android:layout_width="390dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:gravity="center|center_horizontal"
+            android:inputType="textPersonName"
+            android:text="Where is the delivering point" />
+
+        <EditText
+            android:id="@+id/editText_Find_Your_Shop"
+            android:layout_width="390dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:gravity="center|center_horizontal"
+            android:inputType="textPersonName"
+            android:text="Find your Shop" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="OK" />
+
+        <fragment android:id="@+id/autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </MotionLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

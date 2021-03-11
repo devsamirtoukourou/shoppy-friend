@@ -25,6 +25,7 @@
             android:id="@+id/nav_deconnexion"
             android:icon="@drawable/ic_baseline_exit_to_app_24"
             android:title="Deconnexion" />
+
     </group>
 
 </menu>
